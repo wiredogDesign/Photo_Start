@@ -21,9 +21,14 @@
 			justify-content: space-evenly;
 			align-items: center;
 			height: 100vh;
+			margin: 0 auto;
 			max-width: 1200px;
 			font-size: 3vw;
-			background: center/contain no-repeat url('dist/gfx/staring.jpg');
+		}
+
+		picture {
+			position: absolute;
+			z-index: -1;
 		}
 
 		.right {
@@ -62,6 +67,11 @@
 </head>
 <body>
 	<main class="container">
+		<picture>
+			<source srcset="dist/gfx/staring.webp" type="image/webp">
+			<img src="dist/gfx/staring.jpg" alt="twa dugs">
+		</picture>
+
 		<div class="left">
 			<a href="https://photo.wiredog.co.uk">nup</a>
 		</div>

@@ -6,6 +6,9 @@
 	<title>wiredog</title>
 	<style>
 		body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 			height: 100vh;
 			margin: 0;
 			padding: 0 3vw;
@@ -20,9 +23,10 @@
 			flex-flow: row nowrap;
 			justify-content: space-evenly;
 			align-items: center;
+			width: 100vw;
 			height: 100vh;
-			margin: 0 auto;
 			max-width: 1200px;
+			margin: 0 auto;
 			font-size: 3vw;
 		}
 
@@ -54,6 +58,11 @@
 			transition: border-radius 0.3s cubic-bezier(0.63, 0.01, 0.13, 1.58);
 		}
 
+		.no-flex {
+			border: initial;
+			background: initial;
+		}
+
 		.left a:hover {
 			border-radius: 50% 50% 50% 0;
 			background: hsla(0, 100%, 50%, .7);
@@ -69,19 +78,21 @@
 	<main class="container">
 		<picture>
 			<source srcset="dist/gfx/staring.webp" type="image/webp">
-			<img src="dist/gfx/staring.jpg" alt="twa dugs">
+			<img src="dist/gfx/staring.jpg" alt="twa blurry dugs">
 		</picture>
 
 		<div class="left">
-			<a href="https://photo.wiredog.co.uk">nup</a>
+			<a href="https://photo.wiredog.co.uk" title="i want to see anything but dogs, and there will be trouble if i see any dogs there">nup</a>
 		</div>
 
 		<div class="more-content">more dogs &quest;</div>
 
 		<div class="right">
-			<a href="https://dogs.wiredog.co.uk">yup</a>
+			<a href="https://dogs.wiredog.co.uk" title="i think random dogs snaps are the best, let's see them">yup</a>
 		</div>
 	</main>
-	
+	<a class="no-flex" rel="me" href="https://mastodon.online/@wiredog" title="wiredog's mastodon profile - i'm quite boring">
+		<img src="dist/gfx/logo_animated.svg" alt="wiredog logo - it's a stylized dog">
+	</a>
 </body>
 </html>

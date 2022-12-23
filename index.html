@@ -11,13 +11,13 @@
 			align-items: center;
 			height: 100vh;
 			margin: 0;
-			padding: 0 3vw;
+			/* padding: 0 3vw; */
 			overflow: hidden;
-			background-color: hsl(0, 0%, 7%);
 			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 			color: white;
+			background-image: linear-gradient(rgb(33, 33, 33), rgb(88, 88, 88));
 		}
-
+		
 		main {
 			display: flex;
 			flex-flow: row nowrap;
@@ -28,6 +28,14 @@
 			max-width: 1200px;
 			margin: 0 auto;
 			font-size: 3vw;
+			background: center/contain no-repeat url(dist/gfx/staring.jpg);
+			/* background: center/contain no-repeat url(dist/gfx/staring.webp); */
+		}
+
+		@media screen and (orientation: landscape) {
+			main {
+				filter: drop-shadow(0px 10px 17px #222);
+			}
 		}
 
 		picture {
@@ -36,31 +44,30 @@
 		}
 
 		.right {
-			margin: 0 3vw 0 -3vw;
+			/* margin: 0 8vw 0 -8vw; */
 		}
 
 		.left {
-			margin: 0 -3vw 0 3vw
+			/* margin: 0 -8vw 0 8vw */
 		}
 
 		a {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			width: 5vw;
-			height: 5vw;
+			width: 1rem;
+			height: 1rem;
 			padding: 3.2vw;
 			text-decoration: none;
 			color: inherit;
-			border: 0.8vw solid currentColor;
+			/* border: 0.8vw solid currentColor; */
 			border-radius: 50%;
 			background: hsla(0, 0%, 0%, 0.3);
 			transition: border-radius 0.3s cubic-bezier(0.63, 0.01, 0.13, 1.58);
 		}
 
 		.no-flex {
-			border: initial;
-			background: initial;
+			display: none;
 		}
 
 		.left a:hover {
@@ -76,11 +83,6 @@
 </head>
 <body>
 	<main class="container">
-		<picture>
-			<source srcset="dist/gfx/staring.webp" type="image/webp">
-			<img src="dist/gfx/staring.jpg" alt="twa blurry dugs">
-		</picture>
-
 		<div class="left">
 			<a href="https://photo.wiredog.co.uk" title="i want to see anything but dogs, and there will be trouble if i see any dogs there">nup</a>
 		</div>
@@ -91,8 +93,6 @@
 			<a href="https://dogs.wiredog.co.uk" title="i think random dogs snaps are the best, let's see them">yup</a>
 		</div>
 	</main>
-	<a class="no-flex" rel="me" href="https://mastodon.online/@wiredog" title="wiredog's mastodon profile - i'm quite boring">
-		<img src="dist/gfx/logo_animated.svg" alt="wiredog logo - it's a stylized dog">
-	</a>
+	<a class="no-flex" rel="me" href="https://mastodon.online/@wiredog" title="wiredog's mastodon profile - i'm quite boring"></a>
 </body>
 </html>

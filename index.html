@@ -25,7 +25,7 @@
 			align-items: center;
 			width: 100vw;
 			height: 100vh;
-			max-width: 1200px;
+			max-width: 960px;
 			margin: 0 auto;
 			font-size: 3vw;
 			background: center/contain no-repeat url(dist/gfx/staring.jpg);
@@ -43,14 +43,6 @@
 			z-index: -1;
 		}
 
-		.right {
-			/* margin: 0 8vw 0 -8vw; */
-		}
-
-		.left {
-			/* margin: 0 -8vw 0 8vw */
-		}
-
 		a {
 			display: flex;
 			justify-content: center;
@@ -60,25 +52,44 @@
 			padding: 3.2vw;
 			text-decoration: none;
 			color: inherit;
-			/* border: 0.8vw solid currentColor; */
-			border-radius: 50%;
-			background: hsla(0, 0%, 0%, 0.3);
-			transition: border-radius 0.3s cubic-bezier(0.63, 0.01, 0.13, 1.58);
 		}
 
 		.no-flex {
 			display: none;
 		}
 
-		.left a:hover {
-			border-radius: 50% 50% 50% 0;
-			background: hsla(0, 100%, 50%, .7);
+
+		.right, .left {
+			border-radius: 50%;
+			background: hsla(0, 0%, 0%, 0.3);
+			transition: border-radius 0.3s cubic-bezier(0.63, 0.01, 0.13, 1.58);
 		}
 
-		.right a:hover {
-			border-radius: 0 50% 50% 50%;
-			background: hsla(120, 100%, 25%, .8);
+		.right {
+			transform: rotate(45deg);
 		}
+
+			.right > a {
+				transform: rotate(-45deg);
+			}
+
+				.right:hover {
+					border-radius: 0 50% 50% 50%;
+					background: hsla(120, 100%, 25%, .8);
+				}
+		
+		.left {
+			transform: rotate(-45deg);
+		}
+			
+			.left > a {
+				transform: rotate(45deg);
+			}
+
+			.left:hover {
+				border-radius: 50% 50% 50% 0;
+				background: hsla(0, 100%, 50%, .7);
+			}
 	</style>
 </head>
 <body>

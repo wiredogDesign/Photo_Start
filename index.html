@@ -4,101 +4,15 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>wiredog</title>
-	<style>
-		body {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			height: 100vh;
-			margin: 0;
-			/* padding: 0 3vw; */
-			overflow: hidden;
-			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-			color: white;
-			background-image: linear-gradient(rgb(33, 33, 33), rgb(88, 88, 88));
-		}
-		
-		main {
-			display: flex;
-			flex-flow: row nowrap;
-			justify-content: space-evenly;
-			align-items: center;
-			width: 100vw;
-			height: 100vh;
-			max-width: 960px;
-			margin: 0 auto;
-			font-size: 3vw;
-			background: center/contain no-repeat url(dist/gfx/staring.jpg);
-			/* background: center/contain no-repeat url(dist/gfx/staring.webp); */
-		}
-
-		@media screen and (orientation: landscape) {
-			main {
-				filter: drop-shadow(0px 10px 17px #222);
-			}
-		}
-
-		picture {
-			position: absolute;
-			z-index: -1;
-		}
-
-		a {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 1rem;
-			height: 1rem;
-			padding: 3.2vw;
-			text-decoration: none;
-			color: inherit;
-		}
-
-		.no-flex {
-			display: none;
-		}
-
-
-		.right, .left {
-			border-radius: 50%;
-			background: hsla(0, 0%, 0%, 0.3);
-			transition: border-radius 0.3s cubic-bezier(0.63, 0.01, 0.13, 1.58);
-		}
-
-		.right {
-			transform: rotate(45deg);
-		}
-
-			.right > a {
-				transform: rotate(-45deg);
-			}
-
-				.right:hover {
-					border-radius: 0 50% 50% 50%;
-					background: hsla(120, 100%, 25%, .8);
-				}
-		
-		.left {
-			transform: rotate(-45deg);
-		}
-			
-			.left > a {
-				transform: rotate(45deg);
-			}
-
-			.left:hover {
-				border-radius: 50% 50% 50% 0;
-				background: hsla(0, 100%, 50%, .7);
-			}
-	</style>
+	<link rel="stylesheet" href="dist/css/custom.css">
 </head>
 <body>
-	<main class="container">
+	<main>
 		<div class="left">
 			<a href="https://photo.wiredog.co.uk" title="i want to see anything but dogs, and there will be trouble if i see any dogs there">nup</a>
 		</div>
 
-		<div class="more-content">more dogs &quest;</div>
+		<div class="centre">more dogs &quest;</div>
 
 		<div class="right">
 			<a href="https://dogs.wiredog.co.uk" title="i think random dogs snaps are the best, let's see them">yup</a>
